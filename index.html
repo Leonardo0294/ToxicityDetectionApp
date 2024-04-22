@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Toxicidad</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazar archivo de estilos CSS -->
+    <link rel="icon" href="toxico.png" type="image/png">
+</head>
+<body>
+    <h1>Detector de Toxicidad</h1>
+
+    <form id="toxicityForm">
+        <label for="phraseInput">Ingresa una frase:</label><br>
+        <input type="text" id="phraseInput" name="phraseInput" required><br><br>
+        <button type="button" onclick="classifyAndDisplay()">Analizar Toxicidad</button>
+    </form>
+
+    <div id="resultContainer" style="display: none;">
+        <h2>Resultados:</h2>
+        <div id="predictionsList"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+    <script src="script.js"></script> <!-- Enlazar archivo de JavaScript -->
+</body>
+</html>
