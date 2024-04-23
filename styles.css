@@ -1,57 +1,85 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5fa; /* Color de fondo gris claro */
-    color: #333; /* Color de texto principal */
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
     padding: 20px;
 }
 
+/* Estilo del contenedor principal */
+div.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título */
 h1 {
-    color: #6a0dad; /* Color violeta para el título */
+    text-align: center;
+    color: #007bff;
+}
+
+/* Estilo del área de texto */
+label {
+    font-weight: bold;
 }
 
 textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    margin-bottom: 10px;
-    border: 2px solid #6a0dad; /* Borde violeta para el área de texto */
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
+/* Estilo del botón */
 button {
-    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
     font-size: 16px;
-    background-color: #6a0dad; /* Fondo violeta para el botón */
-    color: #fff; /* Color de texto blanco para el botón */
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #8c2fd9; /* Cambio de color violeta más oscuro al pasar el mouse sobre el botón */
+    background-color: #0056b3;
 }
 
+/* Estilo del contenedor de resultados */
+#results-container {
+    margin-top: 20px;
+}
+
+/* Estilo del cargador */
 #loader {
-    margin-top: 10px;
+    display: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.result-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #6a0dad; /* Borde violeta para cada resultado */
-    border-radius: 5px;
-    background-color: #fff; /* Fondo blanco para cada resultado */
-    box-shadow: 0 2px 4px rgba(106, 13, 173, 0.1); /* Sombra suave */
+#loader::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
 }
 
-/* Estilos para los resultados */
-.result-item p {
-    margin: 5px 0;
-}
-
-.result-item p:nth-child(odd) {
-    font-weight: bold; /* Hacer negrita el primer y tercer párrafo dentro de cada resultado */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
