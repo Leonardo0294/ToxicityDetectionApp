@@ -1,51 +1,31 @@
-/* Estilos generales */
+/* Estilos para el formulario y los resultados */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f9f9f9;
     padding: 20px;
 }
 
-h1 {
-    color: #007bff;
-}
-
-form {
-    margin-top: 20px;
-}
-
-input[type="text"] {
-    width: 300px;
+textarea {
+    width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 button {
-    padding: 12px;
+    padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
-    color: white;
+    color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-#resultContainer {
-    margin-top: 20px;
-    text-align: left;
-}
-
-#predictionsList {
+#loader {
     margin-top: 10px;
+}
+
+.result-item {
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff;
 }
