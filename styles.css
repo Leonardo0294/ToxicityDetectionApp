@@ -1,7 +1,13 @@
-/* Estilos para el formulario y los resultados */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5fa; /* Color de fondo gris claro */
+    color: #333; /* Color de texto principal */
     padding: 20px;
+}
+
+h1 {
+    color: #6a0dad; /* Color violeta para el título */
 }
 
 textarea {
@@ -9,15 +15,23 @@ textarea {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
+    border: 2px solid #6a0dad; /* Borde violeta para el área de texto */
+    border-radius: 5px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #6a0dad; /* Fondo violeta para el botón */
+    color: #fff; /* Color de texto blanco para el botón */
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c2fd9; /* Cambio de color violeta más oscuro al pasar el mouse sobre el botón */
 }
 
 #loader {
@@ -27,5 +41,17 @@ button {
 .result-item {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #6a0dad; /* Borde violeta para cada resultado */
+    border-radius: 5px;
+    background-color: #fff; /* Fondo blanco para cada resultado */
+    box-shadow: 0 2px 4px rgba(106, 13, 173, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los resultados */
+.result-item p {
+    margin: 5px 0;
+}
+
+.result-item p:nth-child(odd) {
+    font-weight: bold; /* Hacer negrita el primer y tercer párrafo dentro de cada resultado */
 }
